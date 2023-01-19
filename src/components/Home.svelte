@@ -23,7 +23,7 @@
     </div>
 
     <!-- Information -->
-    <div>
+    <div class="home-information">
         {#each DATA.INFORMATION_DATA as card} 
             <div class="home-information-card">
                 <h3>{card.title}</h3><hr/>
@@ -37,7 +37,6 @@
 
 
 <style lang="scss">
-
 
     .home-screen {
         width: 50%;
@@ -59,6 +58,10 @@
         image-rendering: pixelated;
     }
 
+    @media only screen and (max-width: 800px) { .home-screen {
+        width: 100%;
+    }}
+
     .home-banner {
         color: var(--white);
         width: 100%;
@@ -67,12 +70,6 @@
         background-position: center;
         background-size: cover;
         text-align: left;
-
-        transition: background-size 0.5s;
-
-        &:hover {
-            background-size: 150%;
-        }
     }
 
     .home-banner > .title {
@@ -135,25 +132,38 @@
         }
     }
 
+    .home-information {
+        margin: 15px;
+    }
+
     .home-information-card {
+        height: auto;
         border-radius: 10px;
         background-color: aliceblue;
 
         > .home-information-card-body {
-            margin: 5px;
+            margin: 10px;
+            margin-top: 0;
             border-radius: 10px;
             background-color: var(--gray);
+            color: black;
         }
 
         > hr {
             margin: 0;
+            margin-left: 10px;
+            margin-right: 10px;
         }
         
         > h3 {
-            margin: 0;
+            margin: 10px;
             text-shadow: 2px 2px #000;
             color: #588acb;
         }
+    }
+
+    .network-logo {
+        width: 10px;
     }
 
 </style>

@@ -14,9 +14,13 @@
 <style lang="scss">
 
     .footer {
+        position: relative;
+        bottom: 0;
+        background-color: var(--primary-dark);
         font-size: large;
         display: flex;
         flex-direction: row;
+        box-shadow: 0px -20px var(--primary);
 
         > div {
             margin: 20px;
@@ -35,5 +39,4 @@
             margin: 20px;
         }
     }}
-
 </style>

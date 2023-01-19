@@ -8,7 +8,7 @@
 <home bind:clientWidth={width}>
     <Home/>
     {#if DATA.MOBILE_DEVICE_WIDTH < width}
-        Hello world
+        <img class="image-banner" src='/home/train.webp' alt='banner'>
     {/if}
 </home>
 
@@ -16,5 +16,9 @@
     home {
         display: flex;
         flex-direction: row;
+    }
+
+    .image-banner {
+        flex-grow: 1;
     }
 </style>
